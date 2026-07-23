@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         SEEU - Quadro de Lembretes Detalhado (post-it)
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @version      1.3
 // @description  Exibe lembretes no estilo post-it, clicáveis para abrir o detalhe
 // @match        https://seeu.pje.jus.br/*
@@ -8,6 +8,12 @@
 // @grant        GM_addStyle
 // @connect      seeu.pje.jus.br
 // ==/UserScript==
+
+/*
+ * Este script transforma os lembretes do SEEU em cards visuais tipo post-it,
+ * carregando os detalhes de cada lembrete em segundo plano para facilitar a leitura.
+ * A lógica de coleta e apresentação do conteúdo permanece preservada.
+ */
 
 (function() {
     'use strict';

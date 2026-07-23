@@ -1,12 +1,18 @@
 // ==UserScript==
 // @name         Alterar cor de processos - SEEU
-// @namespace    https://github.com/prfoz
+// @namespace    https://github.com/4Vara
 // @version      2.2
 // @description  Aplica cor de fundo em vários elementos do SEEU conforme a Classe Processual.
 // @author       sche
 // @match        https://seeu.pje.jus.br/seeu/*
 // @grant        none
 // ==/UserScript==
+
+/*
+ * Este script aplica cores visuais aos processos e às linhas de tabelas de acordo
+ * com a classe processual ou sigla identificada no SEEU.
+ * A lógica de mapeamento e observação do DOM permanece intacta.
+ */
 
 (function() {
     'use strict';

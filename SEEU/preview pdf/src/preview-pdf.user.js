@@ -1,11 +1,17 @@
 // ==UserScript==
 // @name         SEEU - Preview PDF em Pop-up
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @version      3
 // @description  Abre o primeiro PDF em um pop-up e reutiliza essa janela para os PDFs seguintes.
 // @match        https://seeu.pje.jus.br/*
 // @grant        GM_addStyle
 // ==/UserScript==
+
+/*
+ * Este script exibe o primeiro PDF em uma janela pop-up e reutiliza essa janela
+ * para os próximos PDFs ao passar o mouse sobre os links.
+ * A documentação foi adicionada sem alterar o funcionamento do preview.
+ */
 
 (function() {
     'use strict';

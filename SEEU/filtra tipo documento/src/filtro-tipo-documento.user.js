@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         SEEU - Filtro de Tipo de Documento
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @version      1.4
 // @description  Adiciona pesquisa ao tipo de documento, preenche tipo de arquivo e movimento conforme o modelo e desmarca pendências.
 // @author       Scheeee
@@ -10,6 +10,12 @@
 // @run-at       document-idle
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=pje.jus.br
 // ==/UserScript==
+
+/*
+ * Este script adiciona uma busca por texto aos campos de tipo de documento e modelo,
+ * facilitando a seleção de opções no SEEU sem alterar o fluxo de automação.
+ * A documentação a seguir descreve as etapas de preenchimento e limpeza de campos.
+ */
 
 (function() {
     'use strict';

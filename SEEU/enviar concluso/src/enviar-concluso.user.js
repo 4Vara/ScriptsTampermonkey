@@ -1,12 +1,18 @@
 // ==UserScript==
 // @name         SEEU - Enviar Concluso
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @version      1
 // @description  Automatiza envio concluso no SEEU
 // @author       Scheeee
 // @match        https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
 // @grant        none
 // ==/UserScript==
+
+/*
+ * Este script adiciona um botão de automação para enviar o processo como concluso,
+ * aguardando a seleção do agrupador dentro do iframe para concluir o fluxo.
+ * A documentação a seguir descreve cada etapa do processo sem mudar a lógica.
+ */
 
 (function() {
     'use strict';

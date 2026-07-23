@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SEEU - Automação Remessa
 // @version      1.1
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @author       Scheeee
 // @description  Insere valores e remove campos indesejados na remessa.
 // @match        https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
@@ -10,6 +10,12 @@
 // @grant        GM_addStyle
 // @run-at       document-end
 // ==/UserScript==
+
+/*
+ * Este script automatiza a abertura e o preenchimento do formulário de remessa,
+ * escondendo campos desnecessários e preenchendo dados padrão para o fluxo.
+ * A documentação abaixo acompanha as duas áreas do fluxo: iframe e tela principal.
+ */
 
 (function () {
     'use strict';

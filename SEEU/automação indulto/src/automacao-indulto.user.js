@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SEEU - Automação Indulto
 // @version      1.0
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @author       Scheeee
 // @description  Fluxo completo Indulto (Salvar + Assinar + Voltar)
 // @match        https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
@@ -14,6 +14,12 @@
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
+
+/*
+ * Este script orquestra o fluxo completo de automação do indulto:
+ * seleciona modelo e tipo de arquivo, preenche campos, assina e navega entre telas.
+ * Os comentários abaixo explicam a estrutura do processo sem modificar o comportamento.
+ */
 
 (function () {
   'use strict';

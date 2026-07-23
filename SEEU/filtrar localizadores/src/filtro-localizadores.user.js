@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Filtro de Localizadores SEEU
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @version      1
 // @description  Cria uma lista de seleção para filtrar a tabela de localizadores.
 // @author       Scheeee
@@ -10,6 +10,12 @@
 // @run-at       document-end
 // ==/UserScript==
 // ==UserScript==
+
+/*
+ * Este script cria um filtro interativo na tabela de localizadores do SEEU,
+ * permitindo selecionar quais itens devem permanecer visíveis.
+ * A documentação foi adicionada sem alterar o fluxo de leitura e persistência do estado.
+ */
 
 (function () {
     'use strict';

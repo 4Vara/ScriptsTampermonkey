@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SEEU - Voltar para Movimentação
 // @version      1.0
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @author       Scheeee
 // @description  Após assinar, aguarda a conclusão do processo (mudança de tela) para clicar em Voltar e selecionar a aba Movimentar.
 // @match        https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
@@ -10,6 +10,12 @@
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
+
+/*
+ * Este script monitora o fluxo de assinatura e, quando o processo é concluído,
+ * clica em Voltar e abre a aba de movimentação para continuar o trabalho.
+ * A documentação abaixo descreve o objetivo do automação sem alterar a lógica existente.
+ */
 
 (function() {
     'use strict';

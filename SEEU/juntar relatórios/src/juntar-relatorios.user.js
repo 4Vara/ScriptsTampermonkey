@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name        SEEU - Automação para Juntar Relatórios
+// @namespace    https://github.com/4Vara
 // @version     2.3
 // @description Seleciona o tipo com base no nome de cada arquivo, desmarca pendência, assina, conclui, volta e navega para as movimentações.
 // @match       https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
@@ -10,6 +11,12 @@
 // @run-at      document-idle
 // @icon        https://www.google.com/s2/favicons?sz=64&domain=pje.jus.br
 // ==/UserScript==
+
+/*
+ * Este script automatiza a junção de relatórios, selecionando tipo de documento,
+ * enviando arquivos, assinando e retornando para a aba de movimentações.
+ * A documentação abaixo descreve o roteamento por estado da sessão sem mudar o fluxo.
+ */
 
 (function() {
     'use strict';

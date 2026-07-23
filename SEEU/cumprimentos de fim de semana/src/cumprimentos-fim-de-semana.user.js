@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         SEEU - Cumprimentos de Fim de Semana
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @version      1.0
 // @author       Scheeee
 // @description  Preenche datas de fim de semana com validação, salvando e abrindo próximo automaticamente.
@@ -8,6 +8,12 @@
 // @match        https://seeu.pje.jus.br/seeu/processo/criminal/cumprimentoMedida.do*
 // @grant        none
 // ==/UserScript==
+
+/*
+ * Este script preenche datas de fim de semana para o fluxo de medidas alternativas,
+ * valida entradas e continua a automação automaticamente quando necessário.
+ * A lógica de preenchimento e controle de estado foi preservada.
+ */
 
 (function () {
   'use strict';

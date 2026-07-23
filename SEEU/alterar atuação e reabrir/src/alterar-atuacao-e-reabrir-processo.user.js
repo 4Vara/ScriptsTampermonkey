@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         SEEU - Alterar Atuação e Reabrir Último (Combinado)
-// @namespace    https://github.com/scheeee
+// @namespace    https://github.com/4Vara
 // @version      2.1
 // @description  Combina as funções de alterar a atuação e reabrir o último processo.
 // @author       scheee & nadameu (versão combinada)
@@ -11,6 +11,12 @@
 // @match        https://seeu.pje.jus.br/seeu/inicio.do*
 // @grant        none
 // ==/UserScript==
+
+/*
+ * Este script combina duas automações: alternar área de atuação e reabrir o último processo
+ * a partir do histórico, preservando o comportamento original e documentando o fluxo.
+ * A estrutura de roteamento e os pontos de integração foram mantidos.
+ */
 
 (function () {
   'use strict';

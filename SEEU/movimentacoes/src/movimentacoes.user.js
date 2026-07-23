@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         seeu-movimentacoes
 // @name:pt-BR   SEEU - Movimentações
+// @namespace    https://github.com/4Vara
 // @namespace    nadameu.com.br
 // @version     3.0
 // @author      nadameu (modificado) / Scheeee
@@ -12,6 +13,12 @@
 // @grant       GM_info
 // @grant       GM_setValue
 // ==/UserScript==
+
+/*
+ * Este script melhora a apresentação das movimentações do processo, removendo colunas
+ * e exibindo avisos de carregamento enquanto o conteúdo é atualizado dinamicamente.
+ * A documentação abaixo reforça o fluxo de observação e integração com o Ajax.
+ */
 
 (function () {
   'use strict';
