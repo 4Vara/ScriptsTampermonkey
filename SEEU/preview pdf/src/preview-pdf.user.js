@@ -20,6 +20,10 @@
     // Variável para armazenar a referência da janela pop-up
     let popupWindow = null;
 
+    /**
+     * Abre ou atualiza uma janela pop-up com o PDF selecionado.
+     * @param {HTMLAnchorElement} link Link do PDF a ser exibido.
+     */
     function showPreview(link) {
         // Define tamanho e opções da janela
         const width = 800;

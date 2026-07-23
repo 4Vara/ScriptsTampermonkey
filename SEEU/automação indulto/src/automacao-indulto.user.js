@@ -30,8 +30,17 @@
   const TEXTO_MODELO_FINAL = '(Leticia Copetti Walter - Analista Judiciário ) - 2 ATO ORDINATÓRIO INDULTO';
   const ID_MODELO_FALLBACK = '663048';
 
-  const log = (...a) => console.log('[SEEU Indulto]', ...a);
+  /**
+   * Registra mensagens de log do fluxo de automação do indulto.
+   * @param {...any} args Itens a serem exibidos no console.
+   */
+  const log = (...args) => console.log('[SEEU Indulto]', ...args);
 
+  /**
+   * Dispara um clique robusto em um botão, simulando eventos do navegador.
+   * @param {HTMLElement} btn Elemento que receberá o clique.
+   * @param {Window} [btnWindow] Janela de contexto usada para criar o evento.
+   */
   function clickRobusto(btn, btnWindow) {
     log('⚡ Usando clique robusto...');
     try {
@@ -51,6 +60,12 @@
   }
 
   // --- waitFor com suporte a iframe ---
+  /**
+   * Aguarda a presença de um elemento na página ou em iframe.
+   * @param {string} selector Seletor CSS usado para localizar o elemento.
+   * @param {(element: Element, window?: Window) => void} cb Função executada quando o elemento for encontrado.
+   * @param {number} [timeout=20000] Tempo máximo de espera em milissegundos.
+   */
   function waitFor(selector, cb, timeout = 20000) {
     const start = Date.now();
     const interval = setInterval(() => {
@@ -144,6 +159,13 @@
   }
 
   // --- Preencher campos com digitação fake ---
+  /**
+   * Preenche um campo com texto simulando digitação e dispara o autocomplete.
+   * @param {string} selector Seletor CSS do campo a ser preenchido.
+   * @param {string} texto Texto a ser digitado.
+   * @param {boolean} [isModelo=false] Indica se o campo é relacionado ao modelo.
+   * @returns {Promise<boolean>} Indica se o autocomplete foi concluído com sucesso.
+   */
   async function preencherCampo(selector, texto, isModelo = false) {
     const campo = document.querySelector(selector);
     if (!campo) return false;
@@ -179,6 +201,10 @@
   }
 
   // --- STATE ---
+  /**
+   * Atualiza o estado de execução no armazenamento da sessão.
+   * @param {string} s Novo estado a ser salvo.
+   */
   function goToState(s) {
     sessionStorage.setItem(STATE_KEY, s);
     log('➡️ Estado definido:', s);

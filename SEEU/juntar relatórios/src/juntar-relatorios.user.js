@@ -24,6 +24,10 @@
     const STATE_KEY = 'seeuJuntarRelatoriosState_v2.1';
     const logPrefix = '[SEEU Automação Juntar]';
 
+    /**
+     * Registra mensagens de log do fluxo de automação.
+     * @param {...any} args Itens a serem exibidos no console.
+     */
     function log(...args) {
         console.log(logPrefix, ...args);
     }
@@ -31,6 +35,11 @@
     log(`Script iniciado. Versão 2.1 Estado atual: ${sessionStorage.getItem(STATE_KEY) || 'inativo'}`);
 
     // Função auxiliar para normalizar texto (remover acentos, tornar minúsculo) para comparação
+    /**
+     * Normaliza texto para comparar descrições de arquivos.
+     * @param {string} text Texto a ser normalizado.
+     * @returns {string} Texto normalizado.
+     */
     function normalizeText(text) {
         if (!text) return '';
         return text.toString().toLowerCase()
@@ -40,6 +49,12 @@
             .trim();
     }
 
+    /**
+     * Aguarda um elemento existir na página antes de executar a callback.
+     * @param {string} selector Seletor CSS a ser buscado.
+     * @param {(element: Element) => void} callback Função executada quando o elemento é encontrado.
+     * @param {number} [timeout=10000] Tempo máximo de espera em milissegundos.
+     */
     function waitForElement(selector, callback, timeout = 10000) {
         log(`Aguardando pelo elemento: "${selector}"`);
         const startTime = Date.now();
@@ -166,6 +181,10 @@
         });
     }
 
+    /**
+     * Processa os arquivos da tabela, seleciona descrições e inicia a assinatura.
+     * @param {HTMLTableSectionElement} tableBody Corpo da tabela com os arquivos.
+     */
     function processFilesAndSign(tableBody) {
         log('Estado "file_selected" detetado. A processar ficheiros na tabela.');
 

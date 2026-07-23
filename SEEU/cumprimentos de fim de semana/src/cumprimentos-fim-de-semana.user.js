@@ -23,6 +23,11 @@
   const KEY_STOP   = 'seeu_stop_execution';
 
   // --------- valida data ---------
+  /**
+   * Valida uma data no formato brasileiro dd/mm/aaaa.
+   * @param {string} str Data a ser validada.
+   * @returns {boolean} Indica se a data é válida.
+   */
   function isValidDateBR(str) {
     if (!/^\d{2}\/\d{2}\/\d{4}$/.test(str)) return false;
 
@@ -41,6 +46,10 @@
   }
 
   // --------- máscara de data enquanto digita (dd/mm/aaaa) ---------
+  /**
+   * Aplica máscara de data em tempo real ao campo digitado.
+   * @param {InputEvent} e Evento de entrada do input.
+   */
   function mascararData(e) {
     let v = e.target.value.replace(/\D/g, '');
     if (v.length > 8) v = v.slice(0, 8);
@@ -56,6 +65,13 @@
   }
 
   // --------- espera elemento ---------
+  /**
+   * Aguarda um seletor existir na página.
+   * @param {string} selector Seletor CSS a ser observado.
+   * @param {(element: Element) => void} callback Função executada quando o elemento é encontrado.
+   * @param {number} [interval=300] Intervalo em milissegundos entre as tentativas.
+   * @param {number} [timeout=10000] Tempo máximo de espera em milissegundos.
+   */
   function waitFor(selector, callback, interval = 300, timeout = 10000) {
     const start = Date.now();
     const timer = setInterval(() => {
@@ -70,6 +86,12 @@
   }
 
   // --------- calcula sábados e domingos ---------
+  /**
+   * Gera as datas de fim de semana dentro de um intervalo.
+   * @param {Date} startDate Data inicial do período.
+   * @param {Date} endDate Data final do período.
+   * @returns {string[]} Lista de datas no formato dd/mm/aaaa.
+   */
   function getWeekendDates(startDate, endDate) {
     const dates = [];
     let current = new Date(startDate);
@@ -87,6 +109,12 @@
   }
 
   // --------- seta valor no input igual ao console ---------
+  /**
+   * Define um valor em um input e dispara os eventos de alteração.
+   * @param {string} elementId ID do elemento alvo.
+   * @param {string} value Valor a ser preenchido.
+   * @returns {HTMLElement|null} Elemento preenchido ou null caso não exista.
+   */
   function setDateValue(elementId, value) {
     const el = document.getElementById(elementId);
     if (!el) {

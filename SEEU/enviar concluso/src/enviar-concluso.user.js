@@ -63,6 +63,10 @@
     /**
      * Loga a ação final após a seleção do item no dropdown.
      */
+    /**
+     * Clica no botão final de envio a partir do documento carregado no iframe.
+     * @param {Document} iframeDocument Documento do iframe onde o botão está presente.
+     */
     function clicarEnviarFinal(iframeDocument) {
         console.log("[SEEU] Clicando em enviar Concluso...");
 

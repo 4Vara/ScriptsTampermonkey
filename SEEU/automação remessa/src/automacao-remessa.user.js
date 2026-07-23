@@ -126,6 +126,10 @@
     // LÓGICA 2: PÁGINA PRINCIPAL (CAPA DO PROCESSO)
     // =================================================================
 
+    /**
+     * Abre o menu de remessa a partir da imagem de contexto da capa do processo.
+     * @param {HTMLImageElement} imgMenu Imagem que dispara o menu contextual.
+     */
     function acionarRemessa(imgMenu) {
         if (!imgMenu) return;
         imgMenu.click();

@@ -49,6 +49,12 @@
     SNAP: XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
   };
 
+  /**
+   * Executa uma busca XPath e retorna os nós encontrados.
+   * @param {string} expression Expressão XPath a ser avaliada.
+   * @param {Document|Element} [context=document] Contexto da busca.
+   * @returns {Element[]} Lista de elementos encontrados.
+   */
   function xpathSnapshot(expression, context = document) {
     try {
       const snap = document.evaluate(expression, context, null, XPATH.SNAP, null);
@@ -145,6 +151,10 @@
     }
   }
 
+  /**
+   * Exibe um aviso de carregamento enquanto a lista de documentos é montada.
+   * @param {Element} mutationTarget Elemento alvo que receberá o aviso.
+   */
   function inserirAvisoSeNecessario(mutationTarget) {
     try {
       if (!mutationTarget || !mutationTarget.parentNode) return;

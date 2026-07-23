@@ -19,7 +19,11 @@
 
 (function() {
     'use strict';
-    // Função auxiliar para normalizar texto (remover acentos e tornar minúsculo)
+    /**
+     * Normaliza texto para comparação mais simples.
+     * @param {string} text Texto a ser normalizado.
+     * @returns {string} Texto normalizado em minúsculas sem acentos.
+     */
     function normalizeText(text) {
         if (!text) return '';
         return text.toString().toLowerCase()
@@ -28,7 +32,12 @@
             .trim();
     }
 
-    // Função para esperar o elemento existir na página
+    /**
+     * Aguarda um elemento existir na página.
+     * @param {string} selector Seletor CSS a ser observado.
+     * @param {(element: Element) => void} callback Função executada quando o elemento for encontrado.
+     * @param {number} [timeout=10000] Tempo máximo de espera em milissegundos.
+     */
     function waitForElement(selector, callback, timeout = 10000) {
         const startTime = Date.now();
         const interval = setInterval(() => {
@@ -43,7 +52,11 @@
         }, 300);
     }
 
-    // Função que espera as opções serem carregadas no seletor
+    /**
+     * Aguarda o seletor receber opções válidas.
+     * @param {HTMLSelectElement} selectElement Seletor a ser monitorado.
+     * @param {() => void} callback Função executada quando houver opções.
+     */
     function waitForOptions(selectElement, callback) {
         const interval = setInterval(() => {
             if (selectElement.options.length > 1) {
@@ -199,6 +212,11 @@
         });
     }
 
+    /**
+     * Preenche os campos de tipo de arquivo com texto e código.
+     * @param {string} texto Texto descritivo do tipo de arquivo.
+     * @param {string} id Código do tipo de arquivo.
+     */
     function preencherCampoTipoArquivo(texto, id) {
         const descricaoInput = document.getElementById('descricaoTipoArquivo');
         const codigoInput = document.getElementById('codTipoArquivo');
@@ -219,6 +237,11 @@
     }
 
 
+    /**
+     * Limpa os campos de tipo de arquivo e movimento.
+     * @param {HTMLSelectElement} tiposSelect Seletor do tipo de movimento.
+     * @param {HTMLInputElement} searchInput Campo de pesquisa associado.
+     */
     function limparCampos(tiposSelect, searchInput) {
 
         preencherCampoTipoArquivo('', '');

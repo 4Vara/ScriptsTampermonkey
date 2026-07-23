@@ -23,7 +23,11 @@
     // CONFIGURAÇÃO
     const ID_ABA_MOVIMENTAR = 'tabItemprefix4';
     const KEY_STATUS = 'seeu_status_automacao';
-    const log = (...a) => console.log('[Auto Voltar]', ...a);
+    /**
+     * Registra mensagens de log do fluxo de automação.
+     * @param {...any} args Itens a serem exibidos no console.
+     */
+    const log = (...args) => console.log('[Auto Voltar]', ...args);
     const path = location.pathname;
     const statusAtual = sessionStorage.getItem(KEY_STATUS);
     if (path.includes('/juntarDocumento.do') || path.includes('/processo.do')) {

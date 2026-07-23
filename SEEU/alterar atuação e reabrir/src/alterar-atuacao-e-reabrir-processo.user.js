@@ -35,7 +35,13 @@
 
   // --- Funções Auxiliares ---
 
-  // Função para criar elementos HTML (do script "Reabrir Último")
+  /**
+   * Cria um elemento HTML com propriedades e filhos opcionais.
+   * @param {string} tag Nome da tag HTML a ser criada.
+   * @param {Record<string, any>|null} [props] Propriedades a serem atribuídas ao elemento.
+   * @param {...Node} children Filhos a serem adicionados ao elemento.
+   * @returns {HTMLElement} Elemento criado.
+   */
   function h(tag, props = null, ...children) {
     const element = document.createElement(tag);
     if (props) {
@@ -47,7 +53,11 @@
     return element;
   }
 
-  // Função para requisições em segundo plano (do script "Alterar Atuação")
+  /**
+   * Faz uma requisição assíncrona para obter o conteúdo de uma URL.
+   * @param {string} url URL alvo da requisição.
+   * @returns {Promise<Document>} Documento retornado pela requisição.
+   */
   function XHR(url) {
     return new Promise((res, rej) => {
       const xhr = new XMLHttpRequest();

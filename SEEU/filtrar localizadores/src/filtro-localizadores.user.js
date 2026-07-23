@@ -35,6 +35,10 @@
         }
     }
 
+    /**
+     * Inicializa o filtro na tabela recebida.
+     * @param {HTMLTableElement} table Tabela de localizadores a ser filtrada.
+     */
     function initializeFilter(table) {
         filterInitialized = true;
 
@@ -59,6 +63,12 @@
         loadAndApplyInitialState(filterContainer, table, columnIndex);
     }
 
+    /**
+     * Extrai os valores únicos da coluna de descrição.
+     * @param {HTMLTableElement} table Tabela contendo os localizadores.
+     * @param {number} columnIndex Índice da coluna de descrição.
+     * @returns {string[]} Lista dos localizadores únicos.
+     */
     function extractLocalizadores(table, columnIndex) {
 
         const localizadoresArr = [];
@@ -94,6 +104,13 @@
         return localizadoresArr.sort((a, b) => a.localeCompare(b));
     }
 
+    /**
+     * Cria a interface de filtro com checkboxes para os localizadores.
+     * @param {string[]} localizadores Lista de valores para montar os filtros.
+     * @param {HTMLTableElement} table Tabela alvo do filtro.
+     * @param {number} columnIndex Índice da coluna a ser filtrada.
+     * @returns {HTMLDivElement} Container da interface criada.
+     */
     function createFilterUI(localizadores, table, columnIndex) {
         const container = document.createElement("div");
         container.id = "localizador-filter-container";
@@ -134,6 +151,11 @@
         return container;
     }
 
+    /**
+     * Aplica os filtros selecionados à tabela.
+     * @param {HTMLTableElement} table Tabela a ser filtrada.
+     * @param {number} columnIndex Índice da coluna usada para comparação.
+     */
     function filterTable(table, columnIndex) {
         const checked = Array.from(document.querySelectorAll(".localizador-checkbox:checked"))
             .map(cb => cb.value);
@@ -156,6 +178,12 @@
         GM_setValue("savedLocalizadores", JSON.stringify(checked));
     }
 
+    /**
+     * Carrega o estado salvo e aplica os filtros iniciais.
+     * @param {HTMLDivElement} container Container com os checkboxes do filtro.
+     * @param {HTMLTableElement} table Tabela alvo do filtro.
+     * @param {number} columnIndex Índice da coluna a ser filtrada.
+     */
     async function loadAndApplyInitialState(container, table, columnIndex) {
         const savedValue = await GM_getValue("savedLocalizadores");
 
