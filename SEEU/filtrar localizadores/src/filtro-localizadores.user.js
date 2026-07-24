@@ -3,7 +3,7 @@
 // @namespace    https://github.com/4Vara
 // @version      1
 // @description  Cria uma lista de seleção para filtrar a tabela de localizadores.
-// @author       Scheeee
+// @author       SCHELIGAN GABRIELE MONZON
 // @match        https://seeu.pje.jus.br/seeu/processo/tipoLocalizador.do*
 // @grant        GM_setValue
 // @grant        GM_getValue
