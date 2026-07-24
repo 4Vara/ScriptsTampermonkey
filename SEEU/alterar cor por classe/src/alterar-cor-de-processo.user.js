@@ -3,7 +3,7 @@
 // @namespace    https://github.com/4Vara
 // @version      2.2
 // @description  Aplica cor de fundo em vários elementos do SEEU conforme a Classe Processual.
-// @author       sche
+// @author       SCHELIGAN GABRIELE MONZON
 // @match        https://seeu.pje.jus.br/seeu/*
 // @grant        none
 // ==/UserScript==
