@@ -2,7 +2,7 @@
 // @name         SEEU - Voltar para Movimentação
 // @version      1.0
 // @namespace    https://github.com/4Vara
-// @author       Scheeee
+// @author       SCHELIGAN GABRIELE MONZON
 // @description  Após assinar, aguarda a conclusão do processo (mudança de tela) para clicar em Voltar e selecionar a aba Movimentar.
 // @match        https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
 // @match        https://seeu.pje.jus.br/seeu/processo/juntarDocumento.do*
