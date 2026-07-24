@@ -3,13 +3,13 @@
 // @namespace    https://github.com/4Vara
 // @version      1
 // @description  Automatiza envio concluso no SEEU
-// @author       Scheeee
+// @author       SCHELIGAN GABRIELE MONZON
 // @match        https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
 // @grant        none
 // ==/UserScript==
 
 /*
- * Este script adiciona um botão de automação para enviar o processo como concluso,
+ * Este script adiciona cria uma ação preferencia, adicionando um botão de automação para enviar o processo como concluso,
  * aguardando a seleção do agrupador dentro do iframe para concluir o fluxo.
  * A documentação a seguir descreve cada etapa do processo sem mudar a lógica.
  */
