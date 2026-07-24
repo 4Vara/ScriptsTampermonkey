@@ -1,8 +1,9 @@
 // ==UserScript==
-// @name        SEEU - Automação para Juntar Relatórios
-// @namespace    https://github.com/4Vara
+// @name        SEEU - ação preferencial para Juntar Relatórios
+// @namespace   https://github.com/4Vara
 // @version     2.3
 // @description Seleciona o tipo com base no nome de cada arquivo, desmarca pendência, assina, conclui, volta e navega para as movimentações.
+// @author       SCHELIGAN GABRIELE MONZON
 // @match       https://seeu.pje.jus.br/seeu/visualizacaoProcesso.do*
 // @match       https://seeu.pje.jus.br/seeu/movimentarProcesso.do*
 // @match       https://seeu.pje.jus.br/seeu/processo/juntarDocumento.do*
@@ -13,7 +14,7 @@
 // ==/UserScript==
 
 /*
- * Este script automatiza a junção de relatórios, selecionando tipo de documento,
+ * Este script cria uma ação preferencial na capa do processo para jutnada de relatórios, selecionando tipo de documento,
  * enviando arquivos, assinando e retornando para a aba de movimentações.
  * A documentação abaixo descreve o roteamento por estado da sessão sem mudar o fluxo.
  */
