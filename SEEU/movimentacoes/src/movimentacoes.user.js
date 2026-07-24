@@ -4,7 +4,7 @@
 // @namespace    https://github.com/4Vara
 // @namespace    nadameu.com.br
 // @version     3.0
-// @author      nadameu (modificado) / Scheeee
+// @author      nadameu (modificado) / SCHELIGAN GABRIELE MONZON
 // @description Melhoria na apresentação das movimentações do processo
 // @match       https://seeu.pje.jus.br/*
 // @grant       GM_addStyle
