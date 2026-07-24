@@ -3,6 +3,7 @@
 // @namespace    https://github.com/4Vara
 // @version      1.3
 // @description  Exibe lembretes no estilo post-it, clicáveis para abrir o detalhe
+// @namespace    https://github.com/4Vara
 // @match        https://seeu.pje.jus.br/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
