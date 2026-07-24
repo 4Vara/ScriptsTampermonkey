@@ -3,6 +3,7 @@
 // @namespace    https://github.com/4Vara
 // @version      3
 // @description  Abre o primeiro PDF em um pop-up e reutiliza essa janela para os PDFs seguintes.
+// @author       SCHELIGAN GABRIELE MONZON
 // @match        https://seeu.pje.jus.br/*
 // @grant        GM_addStyle
 // ==/UserScript==
