@@ -3,7 +3,7 @@
 // @namespace    https://github.com/4Vara
 // @version      1.4
 // @description  Adiciona pesquisa ao tipo de documento, preenche tipo de arquivo e movimento conforme o modelo e desmarca pendências.
-// @author       Scheeee
+// @author       SCHELIGAN GABRIELE MONZON
 // @match        https://seeu.pje.jus.br/seeu/movimentarProcesso.do*
 // @match        https://seeu.pje.jus.br/seeu/processo/juntarDocumento.do*
 // @grant        none
